@@ -23,9 +23,8 @@ def dummy_response():
     # Prepare a dummy response JSON
     response = {
         "body": {
-            "message": "This is a dummy response from the bot.",
-            "received_message": message
-        }
+            "message": f"This is a dummy response from the bot. {message}"
+            }
     }
 
     return jsonify(response)
