@@ -1,9 +1,11 @@
 from flask import Flask, request, jsonify, render_template
+import os
 
 app = Flask(__name__)
 from openai import OpenAI
+api_key = os.getenv('OPENAI_API_KEY')
 
-client = OpenAI(api_key="sk-proj-Xv3f361sX1D16LGAF0HmT3BlbkFJFgsAHypJVxLBawuPb2XK")
+client = OpenAI(api_key=api_key)
 
 
 def chat_response(query):
