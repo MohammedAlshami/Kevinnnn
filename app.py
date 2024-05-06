@@ -112,7 +112,7 @@ def dummy_response():
         # Extract message if it exists
         message = data.get('message', 'No message provided')
         x = with_message_history.invoke(
-        {"ability": "therapy", "input": "answer the folllowing based on our message history: " + input()},
+        {"ability": "therapy", "input": "" + message},
         config={"configurable": {"session_id": "abc123"}},
     )
     

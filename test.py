@@ -80,7 +80,7 @@ config={"configurable": {"session_id": "abc123"}},
 
 while True:
     x = with_message_history.invoke(
-    {"ability": "therapy", "input": "answer the folllowing based on our message history: " + input()},
+    {"ability": "therapy", "input": "" + input()},
     config={"configurable": {"session_id": "abc123"}},
 )
     print(x.content)
