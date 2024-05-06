@@ -45,14 +45,13 @@ import pyrebase
 
 # Firebase configuration
 config = {
- "apiKey": "AIzaSyBLv1DiRB6egmpaoIKfjODXZF5fYheQKIM",
-  "authDomain": "realtimedatabasetest-f226a.firebaseapp.com",
-  "databaseURL":
-    "https://realtimedatabasetest-f226a-default-rtdb.asia-southeast1.firebasedatabase.app",
-  "projectId": "realtimedatabasetest-f226a",
-  "storageBucket": "realtimedatabasetest-f226a.appspot.com",
-  "messagingSenderId": "348704796176",
-  "appId": "1:348704796176:web:38994c5ab4d54b752ce495",
+    "apiKey": "AIzaSyAwgSLl12dW00fSPi7zpjPQLUCxJQCbD64",
+    "authDomain": "aicompanion-95d27.firebaseapp.com",
+    "databaseURL": "https://aicompanion-95d27-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "projectId": "aicompanion-95d27",
+    "storageBucket": "aicompanion-95d27.appspot.com",
+    "messagingSenderId": "16081545115",
+    "appId": "1:16081545115:web:8372ec8bb8f0b7ae5de33e"
 }
 
 # Initialize the app with the config
@@ -65,7 +64,7 @@ db = firebase.database()
 def retrieve_recipes():
     items_list = []
     # Get all data from the "recipe" node
-    recipes = db.child("SlideMapUsers").get()
+    recipes = db.child("DiaryItems").get()
     if recipes.each() is not None:
         for recipe in recipes.each():
             items_list.append(recipe.val())
