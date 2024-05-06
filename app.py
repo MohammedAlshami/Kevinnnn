@@ -16,7 +16,7 @@ def chat_response(query):
         {"role": "user", "content": query}
     ]
     )
-    return completion.choices[0].message
+    return completion.choices[0].message.content
 
 
 @app.route("/")
