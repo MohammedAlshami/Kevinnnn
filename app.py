@@ -43,7 +43,9 @@ from openai import OpenAI
 # api_key = os.getenv('OPENAI_API_KEY')
 
 
-model = ChatOpenAI(api_key="sk-proj-y6oSsBdE890kRklr1WaMT3BlbkFJwGmYphhOuFHxbw3YrVYw", model="gpt-4-turbo")
+api_key = os.getenv('OPENAI_API_KEY')
+
+model = ChatOpenAI(api_key=api_key, model="gpt-4-turbo")
 prompt = ChatPromptTemplate.from_messages(
     [
         (
